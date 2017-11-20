@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for dotfile in $(find . -name ".[^.]*" -type f -maxdepth 1);
+for dotfile in src/*;
 do
   echo "Processing $dotfile"
-  ln -is $dotfile ~/
+  ln -is $dotfile $HOME/.$(basename $dotfile)
 done;
 
