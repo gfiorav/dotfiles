@@ -3,6 +3,6 @@
 for dotfile in src/*;
 do
   echo "Processing $dotfile"
-  ln -is $dotfile $HOME/.$(basename $dotfile)
+  ln -is $PWD/$dotfile $HOME/.$(basename $dotfile)
 done;
 
