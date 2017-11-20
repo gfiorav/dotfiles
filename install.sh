@@ -18,6 +18,6 @@ do
   fi;
 
   echo " ..ok"
-  #ln -s $dotfile ~/
+  ln -s $dotfile ~/
 done;
 
