@@ -1,6 +1,7 @@
 syn on
 
 set number
+set noswapfile
 set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
