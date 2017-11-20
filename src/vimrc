@@ -58,5 +58,8 @@ let g:ctrlp_prompt_mappings = {
 
 " Nord config ('colorscheme nord' must be the last line)
 
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
 colorscheme nord
 
