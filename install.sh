@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for dotfile in $(find . -type f -maxdepth 1 | grep -e ".*");
+for dotfile in $(find . -name ".[^.]*" -type f -maxdepth 1);
 do
-  echo "Linking $dotfile.."
+  echo "Linking $dotfile.."  
   ln -s $dotfile ~/
-done
+done;
 
