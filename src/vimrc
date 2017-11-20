@@ -1,7 +1,12 @@
+" Remember to install Vundle first
+" (https://github.com/VundleVim/Vundle.vim#quick-start), startup vim and type
+" :PluginInstall to get the plugins installed.
+
 syn on
 
 set number
 set noswapfile
+set colorcolumn=101
 set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
