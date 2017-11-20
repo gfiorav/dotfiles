@@ -7,6 +7,7 @@ syn on
 set number
 set noswapfile
 set nowrap
+set cursorline
 set colorcolumn=101
 set laststatus=2
 set statusline+=%#warningmsg#
@@ -35,6 +36,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 
 " Vundle config end
 
