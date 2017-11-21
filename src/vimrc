@@ -8,6 +8,7 @@ set number
 set noswapfile
 set nowrap
 set cursorline
+set clipboard=unnamed
 set colorcolumn=101
 set laststatus=2
 set statusline+=%#warningmsg#
@@ -40,6 +41,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+Plugin 'dkprice/vim-easygrep'
 
 " Vundle config end
 
