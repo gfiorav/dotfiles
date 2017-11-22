@@ -16,25 +16,34 @@ function prompt() {
 }
 
 #
-# Install brew's vim if applicable
+# Install brew and mac apps if mac
 #
 
-if $(prompt "Install and link brew's vim version for shared clipboard? (requires brew)");
+if [ "$(uname)" == "Darwin" ];
 then
-  if [ ! $(command -v brew) ];
+  if $(prompt "Install mac apps? (brew is required)");
   then
-    if $(prompt "brew is not installed, install it now?");
+    if [ ! $(command -v brew) ];
     then
       echo "Installing brew..."
       /usr/bin/ruby \
         -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
-  fi
 
-  echo "Installing brew's vim..."
-  brew install vim
-  echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.bashrc
-  echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.zshrc
+    if $(prompt "Install and link brew's vim version (enables shared clipboard)?");
+    then
+      brew install vim
+      echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.bashrc
+      echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.zshrc
+    fi
+
+    if $(prompt "Install iTerm2?");
+    then
+      brew cask install iterm2
+    fi
+  fi
+else
+  echo "Platform $(uname) not expected, skipping app installation..."
 fi
 
 #
