@@ -5,7 +5,7 @@ function install_brew_vim {
   echo
   if [[ $REPLY =~ ^[Yy]$ ]];
   then
-    brew install vim   
+    brew install vim
     echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.bashrc
     echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.zshrc
   fi
@@ -20,7 +20,7 @@ then
     /usr/bin/ruby \
       -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    install_brew_vim    
+    install_brew_vim
   else
     return;
   fi
