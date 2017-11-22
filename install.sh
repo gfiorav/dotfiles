@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# Helper functions
+#
+
 function prompt() {
   read -p "$1 [y/N]" -r
   echo
@@ -10,6 +14,10 @@ function prompt() {
     return 1;
   fi
 }
+
+#
+# Install brew's vim if applicable
+#
 
 if $(prompt "Install and link brew's vim version for shared clipboard? (requires brew)");
 then
@@ -29,6 +37,10 @@ then
   echo "alias vim=/usr/local/Cellar/vim/*/bin/vim" >> $HOME/.zshrc
 fi
 
+#
+# Install Vundle if not installed
+#
+
 if [ ! -d $HOME/.vim/bundle/Vundle.vim ];
 then
   if $(prompt "Vundle is required for this vim setup, install it now?");
@@ -37,11 +49,19 @@ then
   fi
 fi
 
+#
+# Install dotfiles
+#
+
 for dotfile in src/*;
 do
   echo "Processing $dotfile..."
   ln -is $PWD/$dotfile $HOME/.$(basename $dotfile)
 done;
+
+#
+# Install vim plugins
+#
 
 echo "Installing vim plugins..."
 vim +PluginInstall +qall
