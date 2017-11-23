@@ -20,6 +20,11 @@ set statusline+=%*
 set updatetime=250
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
+" Custom mappings
+
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
 " Vundle config start
 
 set nocompatible
