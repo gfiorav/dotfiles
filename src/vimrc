@@ -47,6 +47,7 @@ Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'danro/rename.vim'
 
 " Vundle config end
 
