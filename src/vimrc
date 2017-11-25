@@ -9,6 +9,7 @@ set noswapfile
 set nowrap
 set cursorline
 set autoread
+set incsearch
 set backspace=2
 set re=1
 set scrolloff=10
