@@ -48,8 +48,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'danro/rename.vim'
-
-" Elixir specific plugins
 Plugin 'elixir-editors/vim-elixir'
 
 " Vundle config end
