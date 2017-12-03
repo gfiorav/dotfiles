@@ -19,12 +19,33 @@ function prompt() {
 # Install ubuntu apps
 #
 
+if $(prompt "Install git?");
+then
+  sudo apt install git libgnome-keyring-dev
+  sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
+
+  git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  git config --global user.email "guido.fioravantti@gmail.com"
+  git config --global user.name "Guido Fioravantti"
+fi
+
+if $(prompt "Install vim?");
+then
+  sudo apt install vim-gnome
+fi
+
 if $(prompt "Install Google Chrome?");
 then
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   sudo apt update
-  sudo apt install google-chrome
+  sudo apt install google-chrome-stable
+fi
+
+if $(prompt "Install Menlo Regular?");
+then
+  curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
+  sudo fc-cache -f -v
 fi
 
 if $(prompt "Install Terminator?");
