@@ -42,9 +42,10 @@ then
   sudo apt install google-chrome-stable
 fi
 
-if $(prompt "Install Menlo Regular?");
+if $(prompt "Install fonts?");
 then
   curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
+  sudo apt install ttf-mscorefonts-installer
   sudo fc-cache -f -v
 fi
 
