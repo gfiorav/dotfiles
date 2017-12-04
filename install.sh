@@ -55,9 +55,14 @@ then
   ln -is $PWD/src/config/terminator/config $HOME/.config/terminator/config
 fi
 
-if $(prompt "Install Terminator?");
+if $(prompt "Install Arc themes?");
 then
   sudo apt install arch-theme
+fi
+
+if $(prompt "Install Gnome Tweak Tool?");
+then
+  sudo apt install gnome-tweak-tool
 fi
 
 #
