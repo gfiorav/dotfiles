@@ -55,6 +55,11 @@ then
   ln -is $PWD/src/config/terminator/config $HOME/.config/terminator/config
 fi
 
+if $(prompt "Install Terminator?");
+then
+  sudo apt install arch-theme
+fi
+
 #
 # Install Vundle if not installed
 #
