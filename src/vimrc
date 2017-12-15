@@ -72,7 +72,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
 
 " Nord config ('colorscheme nord' must be the last line)
 
