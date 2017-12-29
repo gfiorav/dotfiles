@@ -66,6 +66,11 @@ then
   sudo apt install gnome-tweak-tool
 fi
 
+if $(prompt "Add GTK-3 modifications?");
+then
+  ln -is $PWD/src/config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
+fi
+
 #
 # Install Vundle if not installed
 #
