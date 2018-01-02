@@ -49,11 +49,9 @@ then
   sudo fc-cache -f -v
 fi
 
-if $(prompt "Install Terminator?");
+if $(prompt "Install tmux?");
 then
-  sudo apt install terminator
-  mkdir -p $HOME/.config/terminator
-  ln -is $PWD/src/config/terminator/config $HOME/.config/terminator/config
+  sudo apt install tmux 
 fi
 
 if $(prompt "Install Arc themes?");
