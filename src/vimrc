@@ -43,8 +43,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/lightline.vim'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-Plugin 'dkprice/vim-easygrep'
 Plugin 'danro/rename.vim'
 Plugin 'elixir-editors/vim-elixir'
 
