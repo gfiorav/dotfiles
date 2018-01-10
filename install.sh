@@ -69,6 +69,16 @@ then
   ln -is $PWD/src/config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
 fi
 
+if $(prompt "Install Laptop management stuff?");
+then
+  sudo apt install preload tlp thinkfan lm-sensors
+  sudo systemctl enable tlp
+  sudo systemctl enable preload
+  sudo systemctl enable thinkfan
+
+  ln -s $PWD/src/etc/thinkfan.conf /etc/thinkfan.conf
+fi
+
 #
 # Install Vundle if not installed
 #
