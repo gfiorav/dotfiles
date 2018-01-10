@@ -76,7 +76,7 @@ then
   sudo systemctl enable preload
   sudo systemctl enable thinkfan
 
-  sudo ln -s $PWD/src/etc/thinkfan.conf /etc/thinkfan.conf
+  ln -is $PWD/src/etc/thinkfan.conf /etc/thinkfan.conf
 fi
 
 #
