@@ -74,9 +74,6 @@ then
   sudo apt install preload tlp thinkfan lm-sensors
   sudo systemctl enable tlp
   sudo systemctl enable preload
-  sudo systemctl enable thinkfan
-
-  sudo ln -is $PWD/src/etc/thinkfan.conf /etc/thinkfan.conf
 fi
 
 #
