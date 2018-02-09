@@ -21,10 +21,9 @@ function prompt() {
 
 if $(prompt "Install git?");
 then
-  sudo pacman -S git libgnome-keyring-dev
-  sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
+  sudo pacman -S git libsecret
 
-  git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  git config --global credential.helper /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
   git config --global user.email "guido.fioravantti@gmail.com"
   git config --global user.name "Guido Fioravantti"
 fi
