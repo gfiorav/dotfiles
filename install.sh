@@ -47,7 +47,14 @@ fi
 
 if $(prompt "Install tmux?");
 then
-  sudo pacman -S tmux 
+  sudo pacman -S tmux
+fi
+
+if $(prompt "Install Terminator?");
+then
+  sudo pacman -S terminator
+  mkdir -p $HOME/.config/terminator
+  ln -is $PWD/src/config/terminator/config $HOME/.config/terminator/config
 fi
 
 if $(prompt "Install Arc themes?");
