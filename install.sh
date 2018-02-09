@@ -59,7 +59,7 @@ fi
 
 if $(prompt "Install Arc themes?");
 then
-  sudo pacman -S arc-gtk-theme 
+  sudo pacman -S arc-gtk-theme
 fi
 
 if $(prompt "Install Gnome Tweak Tool?");
@@ -74,9 +74,8 @@ fi
 
 if $(prompt "Install Laptop management stuff?");
 then
-  sudo pacman -S preload tlp thinkfan lm-sensors
+  sudo pacman -S tlp tp_smapi acpi_call lm_sensors
   sudo systemctl enable tlp
-  sudo systemctl enable preload
 fi
 
 #
