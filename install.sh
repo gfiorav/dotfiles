@@ -31,7 +31,7 @@ fi
 
 if $(prompt "Install vim?");
 then
-  sudo pacman -S vim-gnome
+  sudo pacman -S gvim
 fi
 
 if $(prompt "Install Google Chrome?");
