@@ -21,59 +21,32 @@ function prompt() {
 
 if $(prompt "Install git?");
 then
-  sudo apt install git libgnome-keyring-dev
-  sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
+  sudo yum install git
 
-  git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  git config --global credential.helper store 
   git config --global user.email "guido.fioravantti@gmail.com"
   git config --global user.name "Guido Fioravantti"
 fi
 
 if $(prompt "Install vim?");
 then
-  sudo apt install vim-gnome
-fi
-
-if $(prompt "Install Google Chrome?");
-then
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-  sudo apt update
-  sudo apt install google-chrome-stable
-fi
-
-if $(prompt "Install fonts?");
-then
-  curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
-  sudo apt install ttf-mscorefonts-installer
-  sudo fc-cache -f -v
+  sudo yum install gvim
 fi
 
 if $(prompt "Install tmux?");
 then
-  sudo apt install tmux 
+  sudo yum install tmux 
 fi
 
-if $(prompt "Install Arc themes?");
+if $(prompt "Use prezto?");
 then
-  sudo apt install arch-theme
-fi
-
-if $(prompt "Install Gnome Tweak Tool?");
-then
-  sudo apt install gnome-tweak-tool
-fi
-
-if $(prompt "Add GTK-3 modifications?");
-then
-  ln -is $PWD/src/config/gtk-3.0/gtk.css $HOME/.config/gtk-3.0/gtk.css
-fi
-
-if $(prompt "Install Laptop management stuff?");
-then
-  sudo apt install preload tlp thinkfan lm-sensors
-  sudo systemctl enable tlp
-  sudo systemctl enable preload
+  sudo yum install zsh
+  zsh -c 'git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
+  zsh -c 'setopt EXTENDED_GLOB;
+          for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+            ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+          done'
+  sudo su - -c 'chsh -s /bin/zsh'
 fi
 
 #
