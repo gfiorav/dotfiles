@@ -23,7 +23,7 @@ if $(prompt "Install git?");
 then
   sudo yum install git
 
-  git config --global credential.helper store 
+  git config --global credential.helper store
   git config --global user.email "guido.fioravantti@gmail.com"
   git config --global user.name "Guido Fioravantti"
 fi
@@ -35,7 +35,8 @@ fi
 
 if $(prompt "Install tmux?");
 then
-  sudo yum install tmux 
+  sudo yum install tmux
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 if $(prompt "Use prezto?");
