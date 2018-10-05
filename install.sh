@@ -24,7 +24,7 @@ then
   sudo apt install git libgnome-keyring-dev
   sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
 
-  git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+  git config --global credential.helper store
   git config --global user.email "guido.fioravantti@gmail.com"
   git config --global user.name "Guido Fioravantti"
 fi
