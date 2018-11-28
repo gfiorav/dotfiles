@@ -45,6 +45,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'danro/rename.vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'tpope/vim-surround'
 
 " Vundle config end
 
