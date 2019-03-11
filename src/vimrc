@@ -21,6 +21,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set updatetime=250
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set nohlsearch
 
 " Vundle config start
 
@@ -39,13 +40,9 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/lightline.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'danro/rename.vim'
 Plugin 'elixir-editors/vim-elixir'
-Plugin 'tpope/vim-surround'
 
 " Vundle config end
 
@@ -62,7 +59,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " CtrlP config
 
@@ -79,5 +76,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|python*'
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
-colorscheme nord
 
+let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 20
+
+colorscheme nord

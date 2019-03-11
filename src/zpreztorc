@@ -224,3 +224,4 @@ zstyle ':prezto:module:prompt' theme 'minimal'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+export DOCKER_HOST=tcp://localhost:2375
