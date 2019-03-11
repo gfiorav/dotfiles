@@ -22,6 +22,7 @@ set statusline+=%*
 set updatetime=250
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set nohlsearch
+set relativenumber
 
 " Vundle config start
 
