@@ -34,6 +34,11 @@ then
   sudo apt install vim-gnome
 fi
 
+if $(prompt "Install neovim?");
+then
+  sudo apt install neovim
+fi
+
 if $(prompt "Install Google Chrome?");
 then
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
