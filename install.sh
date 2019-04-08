@@ -55,7 +55,7 @@ fi
 
 if $(prompt "Install tmux?");
 then
-  sudo apt install tmux 
+  sudo apt install tmux
 fi
 
 if $(prompt "Install Arc themes?");
