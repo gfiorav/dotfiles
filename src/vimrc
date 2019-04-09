@@ -86,3 +86,5 @@ if exists('+termguicolors')
 endif
 
 colorscheme nord
+
+hi ExtraWhitespace guibg=#BF616A
