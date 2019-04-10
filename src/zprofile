@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -67,4 +67,3 @@ fi
 #
 
 alias ibiza_global_radio='vlc ~/Documents/streams/ibiza_global_radio.pls --qt-start-minimized &'
-alias vim='nvim'
