@@ -14,7 +14,6 @@ set laststatus=2
 set nohlsearch
 set noswapfile
 set nowrap
-set number
 set re=1
 set relativenumber
 set scrolloff=10
