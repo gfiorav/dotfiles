@@ -44,6 +44,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/lightline.vim'
+Plugin 'Yggdroot/indentLine'
 
 " Vundle config end
 
@@ -71,6 +72,13 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|python*'
+
+" IndentLine config
+
+let g:indentLine_color_gui = '#3B4252'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_first_char = '·'
+let g:indentLine_char = '·'
 
 " Nord config ('colorscheme nord' must be the last line)
 
