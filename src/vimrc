@@ -89,4 +89,5 @@ let g:lightline = {
 
 colorscheme nord
 
+" Better color for trailing spaces
 hi ExtraWhitespace guibg=#BF616A
