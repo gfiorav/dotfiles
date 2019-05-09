@@ -39,14 +39,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'itchyny/lightline.vim'
+Plugin 'cespare/vim-toml'
 Plugin 'christianfosli/wsl-copy'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-syntastic/syntastic'
 
 " Vundle config end
 
