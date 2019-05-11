@@ -48,7 +48,6 @@ Plugin 'christianfosli/wsl-copy'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-syntastic/syntastic'
 
 " Vundle config end
@@ -73,9 +72,6 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|python*'
-
-" ZoomWin config
-nnoremap <silent> <C-w>e :ZoomWin<CR>
 
 " Nord config ('colorscheme nord' must be the last line)
 
