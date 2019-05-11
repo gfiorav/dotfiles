@@ -25,6 +25,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set term=xterm-256color
 set termguicolors
+set timeoutlen=10
 set updatetime=250
 
 " Vundle config start
