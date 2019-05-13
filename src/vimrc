@@ -25,7 +25,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set term=xterm-256color
 set termguicolors
-set timeoutlen=10
 set updatetime=250
 
 " Vundle config start
@@ -44,7 +43,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cespare/vim-toml'
-Plugin 'christianfosli/wsl-copy'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
