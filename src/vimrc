@@ -4,6 +4,7 @@
 
 syn on
 
+set autochdir
 set autoread
 set backspace=2
 set clipboard=unnamed
@@ -26,6 +27,7 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set term=xterm-256color
 set termguicolors
 set updatetime=250
+set wildmenu
 
 " Vundle config start
 
@@ -70,6 +72,11 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|python*'
+
+" wildmenu config
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=node_modules/*,bower_components/*
 
 " Nord config ('colorscheme nord' must be the last line)
 
