@@ -4,6 +4,7 @@
 
 syn on
 
+set autochdir
 set autoread
 set backspace=2
 set clipboard=unnamed
