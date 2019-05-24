@@ -225,4 +225,4 @@ zstyle ':prezto:module:prompt' theme 'minimal'
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 export DOCKER_HOST=tcp://localhost:2375
-export PATH=$PATH:/home/guido/.local/bin
+export PATH=$PATH:/home/guido/.local/bin:/home/guido/Documents/workspace/node/latest/bin
