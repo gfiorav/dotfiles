@@ -29,6 +29,9 @@ set termguicolors
 set updatetime=250
 set wildmenu
 
+" Remaps
+nnoremap ; :
+
 " Vundle config start
 
 set nocompatible
