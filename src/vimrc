@@ -30,7 +30,7 @@ set updatetime=250
 set wildmenu
 
 " Remaps
-nnoremap ; :
+map ; :
 
 " Vundle config start
 
@@ -43,7 +43,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'bronson/vim-trailing-whitespace'
