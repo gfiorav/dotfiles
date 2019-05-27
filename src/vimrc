@@ -86,13 +86,21 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*,bower_components/*
 
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+
 " Nord config ('colorscheme nord' must be the last line)
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'PaperColor',
       \ }
 
-colorscheme nord
+colorscheme PaperColor
+
+set background=light
 
 " Better color for trailing spaces
 hi ExtraWhitespace guibg=#BF616A
