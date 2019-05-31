@@ -31,7 +31,7 @@ set wildmenu
 
 " Remaps
 map ; :
-tnoremap ; <C-w>N:
+tmap ; <C-w>N:
 map <C-c> <Esc>
 
 " Vundle config start
