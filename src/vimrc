@@ -31,8 +31,11 @@ set wildmenu
 
 " Remaps
 map ; :
-tmap ; <C-w>:
 map <C-c> <Esc>
+
+" :term buffer remaps
+tmap ; <C-w>:
+tmap <C-n> <C-w>N
 
 " Vundle config start
 
