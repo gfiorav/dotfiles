@@ -41,6 +41,8 @@ map <S-l> gt
 " :term buffer remaps
 tmap ; <C-w>:
 tmap <C-n> <C-w>N
+tmap <C-w>H <C-w>gT
+tmap <C-w>L <C-w>gt
 tmap <C-h> <C-w>h
 tmap <C-j> <C-w>j
 tmap <C-k> <C-w>k
