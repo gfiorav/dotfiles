@@ -39,7 +39,6 @@ map <S-h> gT
 map <S-l> gt
 
 " :term buffer remaps
-tmap ; <C-w>:
 tmap <C-n> <C-w>N
 tmap <C-w>H <C-w>gT
 tmap <C-w>L <C-w>gt
