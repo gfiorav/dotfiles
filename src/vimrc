@@ -42,10 +42,6 @@ map <S-l> gt
 tmap <C-n> <C-w>N
 tmap <C-w>H <C-w>gT
 tmap <C-w>L <C-w>gt
-tmap <C-h> <C-w>h
-tmap <C-j> <C-w>j
-tmap <C-k> <C-w>k
-tmap <C-l> <C-w>l
 tmap <C-S-j> <Down>
 tmap <C-S-k> <Up>
 
