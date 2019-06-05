@@ -46,8 +46,6 @@ tmap <C-k> <C-w>k
 tmap <C-l> <C-w>l
 tmap <C-w>H <C-w>gT
 tmap <C-w>L <C-w>gt
-tmap <C-S-j> <Down>
-tmap <C-S-k> <Up>
 
 " Vundle config start
 
