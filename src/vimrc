@@ -60,7 +60,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cespare/vim-toml'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -106,7 +105,7 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Nord config ('colorscheme nord' must be the last line)
+" Papercolor config ('colorscheme PaperColor' must be the last line)
 
 let g:lightline = {
       \ 'colorscheme': 'PaperColor',
