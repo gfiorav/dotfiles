@@ -65,7 +65,6 @@ Plugin 'cespare/vim-toml'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'szymonmaszke/vimpyter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 
@@ -92,7 +91,7 @@ let g:ale_fixers = {
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|python*'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|build\|python*'
 
 " wildmenu config
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
