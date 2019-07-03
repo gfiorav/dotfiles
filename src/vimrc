@@ -110,11 +110,6 @@ let g:lightline = {
       \ 'colorscheme': 'PaperColor',
       \ }
 
-" Papercolor ansi terminal colors
-let g:terminal_ansi_colors = ['#eeeeee', '#af0000', '#008700', '#5f8700',
-      \ '#0087af', '#878787', '#005f87', '#444444', '#bcbcbc', '#d70000',
-      \ '#d70087', '#8700af', '#d75f00', '#d75f00', '#005faf', '#005f87']
-
 colorscheme PaperColor
 
 set background=light
