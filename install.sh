@@ -75,9 +75,14 @@ fi
 
 if $(prompt "Install Laptop management stuff?");
 then
-  sudo apt install preload tlp thinkfan lm-sensors
+  sudo apt install preload tlp tlp-rdw lm-sensors
   sudo systemctl enable tlp
   sudo systemctl enable preload
+fi
+
+if $(prompt "Install thinkfan?");
+then
+  sudo apt install thinkfan
 fi
 
 #
