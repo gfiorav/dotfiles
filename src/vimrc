@@ -8,7 +8,7 @@ set autochdir
 set autoread
 set backspace=2
 set clipboard=unnamed
-set colorcolumn=101
+set colorcolumn=80,90,100
 set cursorline
 set incsearch
 set laststatus=2
