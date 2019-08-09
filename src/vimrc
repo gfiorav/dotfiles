@@ -63,11 +63,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cespare/vim-toml'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'w0rp/ale'
 
 " Vundle config end
 
