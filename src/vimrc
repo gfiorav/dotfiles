@@ -2,7 +2,7 @@
 " (https://github.com/VundleVim/Vundle.vim#quick-start), startup vim and type
 " :PluginInstall to get the plugins installed.
 
-syn on
+syn off
 
 set autochdir
 set autoread
