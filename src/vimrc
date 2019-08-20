@@ -66,6 +66,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'pbrisbin/vim-colors-off'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
 
