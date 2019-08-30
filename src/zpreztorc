@@ -223,6 +223,7 @@ zstyle ':prezto:module:prompt' theme 'minimal'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+export NO_COLOR=true
 export DOCKER_HOST=tcp://localhost:2375
 export PATH=$PATH:/home/guido/.local/bin:/home/guido/Documents/workspace/node/latest/bin
 alias nr='npm run'
