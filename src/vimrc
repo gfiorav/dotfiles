@@ -27,6 +27,7 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set termguicolors
 set updatetime=250
 set wildmenu
+set wrap
 
 " Remaps
 map ; :
@@ -66,7 +67,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'pbrisbin/vim-colors-off'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
 
