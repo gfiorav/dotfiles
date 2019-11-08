@@ -23,7 +23,7 @@ set splitright
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%{SyntasticStatuslineFlag()}
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set termguicolors
 set updatetime=250
 set wildmenu
