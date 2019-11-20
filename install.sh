@@ -33,14 +33,20 @@ then
   sudo apt install vim-gnome
 fi
 
+if $(prompt "Install zsh and prezto?");
+then
+  sudo apt install zsh
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  zsh -c 'setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done'
+  chsh -s /bin/zsh
+fi
+
 if $(prompt "Install libs to build vim from source?");
 then
   sudo apt install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
-fi
-
-if $(prompt "Install neovim?");
-then
-  sudo apt install neovim
 fi
 
 if $(prompt "Install Google Chrome?");
