@@ -31,12 +31,10 @@ fi
 if $(prompt "Install vim?");
 then
   sudo apt install vim-gnome
-  sudo apt install 
 fi
 
 if $(prompt "Install libs to build vim from source?");
 then
-  sudo apt install vim-gnome
   sudo apt install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
 fi
 
