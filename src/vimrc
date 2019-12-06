@@ -10,7 +10,6 @@ set backspace=2
 set clipboard=unnamed
 set colorcolumn=80,90,100
 set cursorline
-set guicursor=i-ci:ver30-iCursor-blinkwait300-blinkon200-blinkoff150
 set incsearch
 set laststatus=2
 set nohlsearch
