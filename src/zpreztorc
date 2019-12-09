@@ -231,4 +231,5 @@ alias nr='npm run'
 # Export display for clipboard integration in wsl
 export DISPLAY=localhost:0.0
 
-echo -ne '\e[4 q'
+# Set cursor to '|'
+echo -ne '\e[6 q'
