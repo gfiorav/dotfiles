@@ -227,3 +227,8 @@ export NO_COLOR=true
 export DOCKER_HOST=tcp://localhost:2375
 export PATH=$PATH:/home/guido/.local/bin:/home/guido/Documents/workspace/node/latest/bin
 alias nr='npm run'
+
+# Export display for clipboard integration in wsl
+export DISPLAY=localhost:0.0
+
+echo -ne '\e[4 q'
