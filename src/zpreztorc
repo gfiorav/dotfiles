@@ -233,3 +233,6 @@ export DISPLAY=localhost:0.0
 
 # Set cursor to '|'
 echo -ne '\e[6 q'
+
+# Set vi mode
+set -o vi
