@@ -219,7 +219,7 @@ zstyle ':prezto:module:prompt' theme 'minimal'
 # Utility
 #
 
-# Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
+# Enabled safe options. This liases cp, ln, mv and rm so that they prompt
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
@@ -233,3 +233,8 @@ export DISPLAY=localhost:0.0
 
 # Set cursor to '|'
 echo -ne '\e[6 q'
+
+# Remove dircolors
+eval "$(dircolors -p | \
+    sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
+    dircolors /dev/stdin)"
