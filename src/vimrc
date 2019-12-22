@@ -68,7 +68,6 @@ Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-ruby/vim-ruby'
 
 " Vundle config end
 
