@@ -114,7 +114,7 @@ let g:lightline = {
 colorscheme PaperColor
 
 " Cursor options
-autocmd VimEnter * silent exec "! echo -ne '\e[5 q'"
+let &t_RS = "\e[5 q"
 
 set background=light
 
