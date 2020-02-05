@@ -51,7 +51,7 @@ fi
 
 if $(prompt "Install libs to compile python from source?");
 then
-    sudo apt install libssl-dev libncurses5-dev libffi-dev
+    sudo apt install libssl-dev libncurses5-dev libffi-dev libreadline-dev
 fi
 
 if $(prompt "Install Google Chrome?");
