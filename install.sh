@@ -49,6 +49,11 @@ then
   sudo apt install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
 fi
 
+if $(prompt "Install libs to compile python from source?");
+then
+    sudo apt install libssl-dev libncurses5-dev libffi-dev
+fi
+
 if $(prompt "Install Google Chrome?");
 then
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
