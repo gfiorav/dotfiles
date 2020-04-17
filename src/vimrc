@@ -4,6 +4,8 @@
 
 syn off
 
+set ignorecase
+set smartcase
 set autochdir
 set autoread
 set backspace=2
@@ -68,6 +70,7 @@ Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
 " Vundle config end
 
