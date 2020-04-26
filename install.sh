@@ -91,9 +91,9 @@ then
   sudo systemctl enable preload
 fi
 
-if $(prompt "Install thinkfan?");
+if $(prompt "Install Thinkpad stuff?");
 then
-  sudo apt install thinkfan
+  sudo apt install thinkfan acpi-call-dkms tp-smapi-dkms acpi-call-dkms
 fi
 
 #
