@@ -33,15 +33,10 @@ then
   sudo apt install vim-gnome
 fi
 
-if $(prompt "Install zsh and prezto?");
+if $(prompt "Install the fish shell");
 then
-  sudo apt install zsh
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  zsh -c 'setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done'
-  chsh -s /bin/zsh
+  sudo apt install fish
+  sudo chsh -s /bin/zsh
 fi
 
 if $(prompt "Install libs to build vim from source?");
