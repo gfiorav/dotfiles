@@ -117,7 +117,10 @@ let g:lightline = {
 colorscheme PaperColor
 
 " Cursor options
-let &t_RS = "\e[5 q"
+let &t_RS = "\<Esc>[6 q"
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[6 q"
+let &t_EI = "\<Esc>[6 q"
 
 set background=light
 

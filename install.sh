@@ -86,14 +86,14 @@ fi
 
 if $(prompt "Install Laptop management stuff?");
 then
-  sudo apt install preload tlp tlp-rdw lm-sensors
+  sudo apt install preload tlp tlp-rdw lm-sensors acpi-call-dkms acpi-call-dkms
   sudo systemctl enable tlp
   sudo systemctl enable preload
 fi
 
-if $(prompt "Install thinkfan?");
+if $(prompt "Install Thinkpad stuff?");
 then
-  sudo apt install thinkfan
+  sudo apt install tp-smapi-dkms
 fi
 
 #
