@@ -126,3 +126,14 @@ set background=light
 
 " Better color for trailing spaces
 hi ExtraWhitespace guibg=#BF616A
+
+" Windows options
+if has("win32")
+    set shell=C:\Windows\Sysnative\wsl.exe
+    set shellpipe=|
+    set shellredir=>
+    set shellcmdflag=
+endif
+
+" Set GUI options
+:set guioptions-=r
