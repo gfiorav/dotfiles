@@ -36,7 +36,17 @@ fi
 if $(prompt "Install the fish shell?");
 then
   sudo apt install fish
-  sudo chsh -s /bin/zsh
+  sudo chsh -s /usr/bin/fish
+fi
+
+if $(prompt "Install fzf?");
+then
+  mkdir -p ~/Documents/workspace
+  cd Documents/workspace
+  git clone https://github.com/junegunn/fzf.git $HOME/Documents/workspace/fzf
+  cd $HOME/Documents/workspace/fzf
+  ./install
+  cd -
 fi
 
 if $(prompt "Install libs to build vim from source?");
@@ -46,7 +56,7 @@ fi
 
 if $(prompt "Install libs to compile python from source?");
 then
-    sudo apt install libssl-dev libncurses5-dev libffi-dev libreadline-dev
+    sudo apt install libssl-dev libncurses5-dev libffi-dev libreadline-dev zlib1g-dev
 fi
 
 if $(prompt "Install Google Chrome?");
