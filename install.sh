@@ -42,7 +42,6 @@ fi
 if $(prompt "Install fzf?");
 then
   mkdir -p ~/Documents/workspace
-  cd Documents/workspace
   git clone https://github.com/junegunn/fzf.git $HOME/Documents/workspace/fzf
   cd $HOME/Documents/workspace/fzf
   ./install
