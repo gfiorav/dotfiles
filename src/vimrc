@@ -136,7 +136,7 @@ if has("win32")
 endif
 
 " Set GUI options
-:set guioptions=aegitdk
+:set guioptions=aegitk
 
 if has("gui_running")
   set guifont=Cascadia\ Code\ Regular\ 10
