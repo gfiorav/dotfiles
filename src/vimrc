@@ -136,7 +136,8 @@ if has("win32")
 endif
 
 " Set GUI options
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
-:set guioptions-=L  "remove left-hand scroll bar
+:set guioptions=aegitdk
+
+if has("gui_running")
+  set guifont=Cascadia\ Code\ Regular\ 10
+endif
