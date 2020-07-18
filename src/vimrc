@@ -4,22 +4,23 @@
 
 syn off
 
-set ignorecase
-set smartcase
 set autochdir
 set autoread
 set backspace=2
 set clipboard=unnamed
 set colorcolumn=80,90,100
 set cursorline
+set ignorecase
 set incsearch
 set laststatus=2
+set mouse=a
 set nohlsearch
 set noswapfile
 set nowrap
 set re=1
 set relativenumber
 set scrolloff=10
+set smartcase
 set splitbelow
 set splitright
 set statusline+=%#warningmsg#
