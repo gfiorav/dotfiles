@@ -35,6 +35,7 @@ fi
 
 if $(prompt "Install the fish shell?");
 then
+  ln -is $PWD/src/config/fish/* $HOME/.config/fish/
   sudo apt install fish
   sudo chsh -s /usr/bin/fish
 fi
