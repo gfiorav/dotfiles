@@ -30,7 +30,7 @@ fi
 
 if $(prompt "Install vim?");
 then
-  sudo apt install vim-gnome
+  sudo apt install vim
 fi
 
 if $(prompt "Install the fish shell?");
