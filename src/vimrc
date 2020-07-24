@@ -26,6 +26,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%{SyntasticStatuslineFlag()}
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tags=tags;~/Documents/workspace
 set termguicolors
 set updatetime=250
 set wildmenu
