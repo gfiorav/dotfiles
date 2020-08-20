@@ -51,7 +51,7 @@ fi
 
 if $(prompt "Install libs to build vim from source?");
 then
-  sudo dnf install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
+  sudo dnf install libX11-devel libXtst-devel libXt-devel libSM-devel libXpm-devel ncurses-devel
 fi
 
 if $(prompt "Install libs to compile python from source?");
