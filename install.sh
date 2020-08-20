@@ -21,7 +21,7 @@ function prompt() {
 
 if $(prompt "Install git?");
 then
-  sudo apt install git
+  sudo dnf install git
 
   git config --global credential.helper store
   git config --global user.email "guido.fioravantti@gmail.com"
@@ -30,13 +30,13 @@ fi
 
 if $(prompt "Install vim?");
 then
-  sudo apt install vim
+  sudo dnf install vim
 fi
 
 if $(prompt "Install the fish shell?");
 then
   ln -is $PWD/src/config/fish/* $HOME/.config/fish/
-  sudo apt install fish
+  sudo dnf install fish
   chsh -s /usr/bin/fish
 fi
 
@@ -51,42 +51,42 @@ fi
 
 if $(prompt "Install libs to build vim from source?");
 then
-  sudo apt install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
+  sudo dnf install libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev libncurses5-dev build-essential
 fi
 
 if $(prompt "Install libs to compile python from source?");
 then
-    sudo apt install libssl-dev libncurses5-dev libffi-dev libreadline-dev zlib1g-dev
+    sudo dnf install libssl-dev libncurses5-dev libffi-dev libreadline-dev zlib1g-dev
 fi
 
 if $(prompt "Install Google Chrome?");
 then
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-  sudo apt update
-  sudo apt install google-chrome-stable
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo dnf-key add -
+  sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/dnf/sources.list.d/google.list'
+  sudo dnf update
+  sudo dnf install google-chrome-stable
 fi
 
 if $(prompt "Install fonts?");
 then
   curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
-  sudo apt install ttf-mscorefonts-installer
+  sudo dnf install ttf-mscorefonts-installer
   sudo fc-cache -f -v
 fi
 
 if $(prompt "Install tmux?");
 then
-  sudo apt install tmux
+  sudo dnf install tmux
 fi
 
 if $(prompt "Install Arc themes?");
 then
-  sudo apt install arch-theme
+  sudo dnf install arch-theme
 fi
 
 if $(prompt "Install Gnome Tweak Tool?");
 then
-  sudo apt install gnome-tweak-tool
+  sudo dnf install gnome-tweak-tool
 fi
 
 if $(prompt "Add GTK-3 modifications?");
@@ -96,14 +96,14 @@ fi
 
 if $(prompt "Install Laptop management stuff?");
 then
-  sudo apt install preload tlp tlp-rdw lm-sensors acpi-call-dkms acpi-call-dkms
+  sudo dnf install preload tlp tlp-rdw lm-sensors acpi-call-dkms acpi-call-dkms
   sudo systemctl enable tlp
   sudo systemctl enable preload
 fi
 
 if $(prompt "Install Thinkpad stuff?");
 then
-  sudo apt install tp-smapi-dkms
+  sudo dnf install tp-smapi-dkms
 fi
 
 #
