@@ -97,7 +97,7 @@ let g:ale_fixers = {
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|_build\|build\|python*'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|python*'
 
 " wildmenu config
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
