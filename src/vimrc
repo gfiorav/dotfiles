@@ -141,5 +141,5 @@ endif
 :set guioptions=aegitk
 
 if has("gui_running")
-  set guifont=Cascadia\ Code\ Regular\ 9
+  set guifont=Source\ Code\ Pro\ Regular\ 11
 endif
