@@ -43,6 +43,7 @@ map <C-l> <C-w>l
 map <S-h> gT
 map <S-l> gt
 nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-g> :Ag<Cr>
 
 " :term buffer remaps
 tmap <C-n> <C-w>N
