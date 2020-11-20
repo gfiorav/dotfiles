@@ -42,6 +42,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <S-h> gT
 map <S-l> gt
+nnoremap <C-p> :GFiles<Cr>
 
 " :term buffer remaps
 tmap <C-n> <C-w>N
@@ -67,9 +68,11 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cespare/vim-toml'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -95,9 +98,9 @@ let g:ale_fixers = {
 
 " CtrlP config
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|python*'
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|python*'
 
 " wildmenu config
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
