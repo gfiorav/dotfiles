@@ -47,6 +47,7 @@ then
   cd $HOME/Documents/workspace/fzf
   ./install
   cd -
+  sudo apt install silversearcher-ag
 fi
 
 if $(prompt "Install libs to build vim from source?");
