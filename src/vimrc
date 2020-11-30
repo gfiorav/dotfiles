@@ -49,6 +49,7 @@ nnoremap <C-g> :Ag<Cr>
 tmap <silent> <M-b> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>b")<CR>
 tmap <silent> <M-d> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>d")<CR>
 tmap <silent> <M-f> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>f")<CR>
+tmap <silent> <M-e> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>e")<CR>
 
 " :term buffer remaps
 tmap <C-n> <C-w>N
