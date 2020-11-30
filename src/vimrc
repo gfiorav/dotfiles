@@ -148,4 +148,5 @@ if has("win32")
 endif
 
 " Set GUI options
-:set guioptions=aegitk
+set guioptions=aegitk
+set guicursor=
