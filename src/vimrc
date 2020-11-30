@@ -45,6 +45,11 @@ map <S-l> gt
 nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Ag<Cr>
 
+" Allow meta keys in terminal:
+tmap <silent> <M-b> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>b")<CR>
+tmap <silent> <M-d> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>d")<CR>
+tmap <silent> <M-f> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>f")<CR>
+
 " :term buffer remaps
 tmap <C-n> <C-w>N
 tmap <C-h> <C-w>h
