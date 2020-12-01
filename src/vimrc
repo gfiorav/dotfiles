@@ -149,4 +149,5 @@ endif
 
 " Set GUI options
 set guioptions=aegitk
-set guicursor=
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
