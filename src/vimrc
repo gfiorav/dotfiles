@@ -151,4 +151,8 @@ endif
 set guioptions=aegitk
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
-set guifont=Monospace\ 9
+
+" Only on linux:
+if has("gui_gtk2") || has("gui_gtk3")
+    set guifont=Monospace\ 9
+endif
