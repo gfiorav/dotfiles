@@ -156,3 +156,8 @@ set guicursor+=i:blinkwait10
 if has("gui_gtk2") || has("gui_gtk3")
     set guifont=Monospace\ 9
 endif
+
+" Only on macOS:
+if has("gui_gtk2") || has("gui_gtk3")
+    set guifont=Menlo-Regular:h13
+endif
