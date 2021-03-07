@@ -63,7 +63,6 @@ tmap <C-w>L <C-w>gt
 " Vundle config start
 
 set nocompatible
-filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -75,12 +74,11 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'cespare/vim-toml'
-" Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dense-analysis/ale'
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 
