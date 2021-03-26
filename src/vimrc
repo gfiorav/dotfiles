@@ -44,8 +44,6 @@ map <S-h> gT
 map <S-l> gt
 nnoremap <C-g> :Ag<Cr>
 nnoremap <C-p> :GFiles<Cr>
-noremap jj <nop>
-noremap kk <nop>
 
 " Allow meta keys in terminal:
 tmap <silent> <M-b> <C-w>:call term_sendkeys(bufnr('%'), "\<lt>Esc>b")<CR>
