@@ -129,6 +129,9 @@ do
   ln -is $PWD/$dotfile $HOME/.$(basename $dotfile)
 done;
 
+# Deal with MacVim particularities
+ln -is $PWD/vimrc $HOME/.gvimrc
+
 #
 # Install vim plugins
 #

@@ -155,3 +155,8 @@ set guicursor+=i:blinkwait10
 if has("gui_gtk2") || has("gui_gtk3")
     set guifont=Monospace\ 9
 endif
+
+" Only MacVim
+if has("gui_macvim")
+    set guifont=Menlo-Regular:h14
+endif
