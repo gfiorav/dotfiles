@@ -1,7 +1,3 @@
-" Remember to install Vundle first
-" (https://github.com/VundleVim/Vundle.vim#quick-start), startup vim and type
-" :PluginInstall to get the plugins installed.
-
 syn off
 
 set autochdir
@@ -28,7 +24,6 @@ set statusline+=%*
 set statusline+=%{SyntasticStatuslineFlag()}
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set tags=tags;~/Documents/workspace
-set termguicolors
 set updatetime=250
 set wildmenu
 set wrap
@@ -60,33 +55,24 @@ tmap <C-l> <C-w>l
 tmap <C-w>H <C-w>gT
 tmap <C-w>L <C-w>gt
 
-" Vundle config start
+" vim-plug
 
-set nocompatible
+call plug#begin()
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'cespare/vim-toml'
+Plug 'dense-analysis/ale'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'mhinz/vim-signify'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
-Plugin 'VundleVim/Vundle.vim'
-
-" Plugins
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'cespare/vim-toml'
-Plugin 'dense-analysis/ale'
-Plugin 'itchyny/lightline.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-
-" Vundle config end
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " ALE config
 let g:ale_javascript_eslint_use_global = 1
@@ -113,12 +99,6 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*,bower_components/*
 
-if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
-    set t_ut=
-endif
-
 " Papercolor config ('colorscheme PaperColor' must be the last line)
 
 let g:lightline = {
@@ -139,11 +119,12 @@ set background=light
 hi ExtraWhitespace guibg=#BF616A
 
 " Windows options
-if has("win32")
-    set shell=C:\Windows\Sysnative\wsl.exe
-    set shellpipe=|
-    set shellredir=>
-    set shellcmdflag=
+if has("win32") || has("win64")
+    " Set Widnows type font
+    set guifont=Consolas:h10:cANSI:qDRAFT
+
+    " Fix gitgutter for Windows (Git command preference)
+    let g:gitgutter_git_executable = 'C:\Program Files\Git\cmd\git.exe'
 endif
 
 " Set GUI options
