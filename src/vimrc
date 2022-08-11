@@ -88,12 +88,6 @@ let g:ale_fixers = {
       \ 'typescript': ['tslint'],
       \ }
 
-" CtrlP config
-
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|deps\|python*'
-
 " wildmenu config
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
