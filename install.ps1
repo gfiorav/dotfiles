@@ -2,11 +2,11 @@
 # Helper functions
 #
 
-function User-Wants-To {
-    param (
+function Get-User-Consent {
+    Param (
         $prompt
     )
-   
+
     $response = Read-Host -Prompt "'$prompt' [y/N]"
 
     # TODO: match uppercase Y too.
@@ -17,8 +17,8 @@ function User-Wants-To {
     }
 }
 
-function Command-Exists {
-    param ($command)
+function Test-Command-Exists {
+    Param ($command)
 
     $oldPreference = $ErrorActionPreference
 
@@ -29,7 +29,7 @@ function Command-Exists {
             return $true
         }
     } catch {
-        Write-Host "$command does not exist"
+        Write-Host "'$command' is not installed."
         return $false
     } finally {
         $ErrorActionPreference=$oldPreference
@@ -37,12 +37,21 @@ function Command-Exists {
 }
 
 function Install-If-Not-Exists {
-    param ($package)
+    Param (
+        $package,
+        $bin_name
+    )
 
-    if (Command-Exists $package) {
+    if ($null -eq $bin_name) {
+        $bin = $package
+    } else {
+        $bin = $bin_name
+    }
+
+    if (Test-Command-Exists $bin) {
         Write-Host "'$package' is already installed, skipping..."
     } else {
-        if (User-Wants-To "Install '$package'?") {
+        if (Get-User-Consent "Install '$package'?") {
             Write-Host "Installing '$package'..."
             Start-Process `
                 -File "choco" `
@@ -55,10 +64,20 @@ function Install-If-Not-Exists {
     }
 }
 
-if (Command-Exists "choco") {
+function Install-Vim-Plugins {
+    Param ($plugin_names)
+
+    $github_url = "https://github.com"
+    foreach ($plugin_name in $plugin_names) {
+        Invoke-Expression `
+            "git clone $github_url/$plugin_name C:\Users\$env:UserName\vimfiles\plugin\$plugin_name"
+    }
+} 
+
+if (Test-Command-Exists "choco") {
     Write-Host "Choco is already installed, skipping..."
 } else {
-    if (User-Wants-To "Install Chocolatey?") {
+    if (Get-User-Consent "Install Chocolatey?") {
         Write-Host "Installing Chocolatey..."
         Set-ExecutionPolicy Bypass -Scope Process -Force
         [System.Net.ServicePointManager]::SecurityProtocol =
@@ -76,5 +95,21 @@ if (Command-Exists "choco") {
 
 # Install choco packages:
 Install-If-Not-Exists "git"
-Install-If-Not-Exists "code"
+Install-If-Not-Exists "curl"
+
+# Vim's a big one:
 Install-If-Not-Exists "vim"
+Copy-Item -Path "./src/vimrc" -Destination "C:\Users\$env:UserName\_vimrc"
+
+## Install Vim-Plug
+Invoke-WebRequest `
+    -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
+    | New-Item $HOME/vimfiles/autoload/plug.vim -Force
+
+Invoke-Expression "vim +PlugInstall +qall"
+
+# Install other packages
+Install-If-Not-Exists "code"
+Install-If-Not-Exists "make"
+Install-If-Not-Exists "python"
+Install-If-Not-Exists "nodejs" "node"
