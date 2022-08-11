@@ -46,7 +46,7 @@ function Install-If-Not-Exists {
             Write-Host "Installing '$package'..."
             Start-Process `
                 -File "choco" `
-                -ArgumentList "install -y '$package'" `
+                -ArgumentList "install -y $package" `
                 -Verb RunAs `
                 -Wait
         } else {
