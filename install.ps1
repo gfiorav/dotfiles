@@ -72,7 +72,7 @@ function Install-Vim-Plugins {
         Invoke-Expression `
             "git clone $github_url/$plugin_name C:\Users\$env:UserName\vimfiles\plugin\$plugin_name"
     }
-} 
+}
 
 if (Test-Command-Exists "choco") {
     Write-Host "Choco is already installed, skipping..."
@@ -100,6 +100,7 @@ Install-If-Not-Exists "curl"
 # Vim's a big one:
 Install-If-Not-Exists "vim"
 Copy-Item -Path "./src/vimrc" -Destination "C:\Users\$env:UserName\_vimrc"
+Install-If-Not-Exists "fzf"
 
 ## Install Vim-Plug
 Invoke-WebRequest `
