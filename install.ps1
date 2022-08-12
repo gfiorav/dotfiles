@@ -17,6 +17,7 @@ function Get-User-Consent {
     }
 }
 
+# Sniped from https://devblogs.microsoft.com/scripting/use-a-powershell-function-to-see-if-a-command-exists/
 function Test-Command-Exists {
     Param ($command)
 
