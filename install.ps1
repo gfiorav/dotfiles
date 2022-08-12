@@ -94,6 +94,12 @@ if (Test-Command-Exists "choco") {
     }
 }
 
+# Configure PowerShell
+Copy-Item `
+    -Path "./src/profile.ps1" `
+    -Destination `
+        "C:\Users\$env:UserName\Documents\WindowsPowerShell\profile.ps1"
+
 # Install choco packages:
 Install-If-Not-Exists "git"
 Install-If-Not-Exists "curl"
