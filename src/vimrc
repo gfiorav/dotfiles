@@ -64,6 +64,7 @@ Plug 'airblad/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cespare/vim-toml'
 Plug 'dense-analysis/ale'
+Plug 'github/copilot.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

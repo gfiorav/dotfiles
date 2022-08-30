@@ -114,7 +114,7 @@ Invoke-WebRequest `
     -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim `
     | New-Item $HOME/vimfiles/autoload/plug.vim -Force
 
-Invoke-Expression "vim +PlugInstall +qall"
+Invoke-Expression "vim +PlugInstall +PlugClean +qall"
 
 # Install other packages
 Install-If-Not-Exists "code"
