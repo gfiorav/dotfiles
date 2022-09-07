@@ -60,7 +60,7 @@ tmap <C-w>L <C-w>gt
 call plug#begin()
 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'airblad/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cespare/vim-toml'
 Plug 'dense-analysis/ale'

@@ -111,11 +111,12 @@ fi
 # Install Vundle if not installed
 #
 
-if [ ! -d $HOME/.vim/bundle/Vundle.vim ];
+if [ ! -d $HOME/.vim/autoload/plug.vim ];
 then
-  if $(prompt "Vundle is required for this vim setup, install it now?");
+  if $(prompt "Vim Plug is required for this vim setup, install it now?");
   then
-    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   fi
 fi
 
@@ -137,7 +138,6 @@ ln -is $PWD/vimrc $HOME/.gvimrc
 #
 
 echo "Installing vim plugins..."
-vim +PluginInstall +qall
+vim +PlugInstall +PlugClean +qall
 
 echo "Installation complete!"
-
