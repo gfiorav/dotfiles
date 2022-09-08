@@ -6,7 +6,6 @@ set backspace=2
 set clipboard=unnamed
 set colorcolumn=80,90,100
 set cursorline
-set grepprg=internal
 set ignorecase
 set incsearch
 set laststatus=2
@@ -122,6 +121,12 @@ if has("win32") || has("win64")
 
     " Fix gitgutter for Windows (Git command preference)
     let g:gitgutter_git_executable = 'C:\Program Files\Git\cmd\git.exe'
+
+    " Bind powershell to the :term command
+    cabbrev term term ++close powershell
+
+    " Use internal grep on Windows
+    set grepprg=internal
 endif
 
 " Set GUI options
