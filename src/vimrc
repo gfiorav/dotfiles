@@ -6,6 +6,7 @@ set backspace=2
 set clipboard=unnamed
 set colorcolumn=80,90,100
 set cursorline
+set grepprg=internal
 set ignorecase
 set incsearch
 set laststatus=2
@@ -19,9 +20,9 @@ set scrolloff=10
 set smartcase
 set splitbelow
 set splitright
-set statusline+=%#warningmsg#
-set statusline+=%*
 set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%#warningmsg#
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set tags=tags;~/Documents/workspace
 set updatetime=250
