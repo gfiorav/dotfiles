@@ -116,9 +116,6 @@ Invoke-WebRequest `
 
 Invoke-Expression "vim +PlugInstall +PlugClean +qall"
 
-# Install powershell module
-Install-Module -Name blueshellutils -Scope CurrentUser
-
 # Install other packages
 Install-If-Not-Exists "code"
 Install-If-Not-Exists "make"
