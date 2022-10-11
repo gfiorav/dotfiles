@@ -9,7 +9,6 @@ set cursorline
 set ignorecase
 set incsearch
 set laststatus=2
-set list
 set mouse=a
 set nohlsearch
 set noswapfile
