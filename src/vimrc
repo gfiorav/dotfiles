@@ -117,7 +117,7 @@ hi ExtraWhitespace guibg=#BF616A
 " Windows options
 if has("win32") || has("win64")
     " Set Widnows type font
-    set guifont=Consolas:h11:cANSI:qDRAFT
+    set guifont=Cascadia_Code:h11:cANSI:qDRAFT
 
     " Fix gitgutter for Windows (Git command preference)
     let g:gitgutter_git_executable = 'C:\Program Files\Git\cmd\git.exe'
