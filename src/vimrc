@@ -123,7 +123,7 @@ if has("win32") || has("win64")
     let g:gitgutter_git_executable = 'C:\Program Files\Git\cmd\git.exe'
 
     " Bind powershell to the :term command
-    cabbrev term term ++close powershell
+    cabbrev term term ++close pwsh
 
     " Use internal grep on Windows
     set grepprg=internal

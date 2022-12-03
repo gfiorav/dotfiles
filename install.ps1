@@ -117,6 +117,7 @@ Invoke-WebRequest `
 Invoke-Expression "vim +PlugInstall +PlugClean +qall"
 
 # Install other packages
+Install-If-Not-Exists "powershell-core" "pwsh"
 Install-If-Not-Exists "code"
 Install-If-Not-Exists "make"
 Install-If-Not-Exists "python"
