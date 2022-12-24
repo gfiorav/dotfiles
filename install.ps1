@@ -43,7 +43,7 @@ function Update-Choco-Packages {
 
     $process = Start-Process `
         -FilePath $chocoPath.Path `
-        -ArgumentList "upgrade all" `
+        -ArgumentList "upgrade all -y" `
         -Verb RunAs -Wait -PassThru
 
     if ($process.ExitCode -ne 0) {
@@ -51,7 +51,9 @@ function Update-Choco-Packages {
     }
 }
 
-function Install-If-Not-Exists {
+# Installs a package using chocolatey. Accepts a package name and an executable
+# to check if it's already installed.
+function Install-With-Choco-If-Not-Exists {
     Param (
         $package,
         $bin_name
@@ -69,8 +71,38 @@ function Install-If-Not-Exists {
         if (Get-User-Consent "Install '$package'?") {
             Write-Host "Installing '$package'..."
             Start-Process `
-                -File "choco" `
+                -FilePath "choco" `
                 -ArgumentList "install -y $package" `
+                -Verb RunAs `
+                -Wait
+        } else {
+            Write-Host "Skipping '$package'..."
+        }
+    }
+}
+
+# Installs a package using winget. Accepts a package name and an executable
+# to check if it's already installed.
+function Install-With-Winget-If-Not-Exists {
+    Param (
+        $package,
+        $bin_name
+    )
+
+    if ($null -eq $bin_name) {
+        $bin = $package
+    } else {
+        $bin = $bin_name
+    }
+
+    if (Test-Command-Exists $bin) {
+        Write-Host "'$package' is already installed, skipping..."
+    } else {
+        if (Get-User-Consent "Install '$package'?") {
+            Write-Host "Installing '$package'..."
+            Start-Process `
+                -FilePath "winget" `
+                -ArgumentList "install $package" `
                 -Verb RunAs `
                 -Wait
         } else {
@@ -99,16 +131,26 @@ if (Test-Command-Exists "choco") {
         Set-ExecutionPolicy Bypass -Scope Process -Force
         [System.Net.ServicePointManager]::SecurityProtocol =
             [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-        Invoke-Expression (
-            (New-Object System.Net.WebClient).DownloadString(
-                "https://community.chocolatey.org/install.ps1"
-            )
-        )
+        # Execute as admin
+        Start-Process `
+            -FilePath "powershell" `
+            -ArgumentList "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" `
+            -Verb RunAs `
+            -Wait
     } else {
         Write-Host "Chocolatey is needed to run this script. Exiting..."
         return $false
     }
 }
+
+# Update all winget packages
+# Print that we're going to update all winget packages
+Write-Host "Updating all winget packages..."
+Start-Process `
+    -FilePath "winget" `
+    -ArgumentList "upgrade --all --accept-source-agreements --accept-package-agreements --accept-licenses" `
+    -Verb RunAs `
+    -Wait
 
 # Configure PowerShell
 Copy-Item `
@@ -117,13 +159,13 @@ Copy-Item `
         "C:\Users\$env:UserName\Documents\WindowsPowerShell\profile.ps1"
 
 # Install choco packages:
-Install-If-Not-Exists "git"
-Install-If-Not-Exists "curl"
+Install-With-Winget-If-Not-Exists "Git.Git" "git"
+Install-With-Choco-If-Not-Exists "curl"
 
 # Vim's a big one:
-Install-If-Not-Exists "vim"
+Install-With-Winget-If-Not-Exists "vim.vim" "vim"
 Copy-Item -Path "./src/vimrc" -Destination "C:\Users\$env:UserName\_vimrc"
-Install-If-Not-Exists "fzf"
+Install-With-Choco-If-Not-Exists "fzf"
 
 ## Install Vim-Plug
 Invoke-WebRequest `
@@ -133,14 +175,10 @@ Invoke-WebRequest `
 Invoke-Expression "vim +PlugInstall +PlugClean +qall"
 
 # Install other packages
-Install-If-Not-Exists "powershell-core" "pwsh"
-Install-If-Not-Exists "code"
-Install-If-Not-Exists "make"
-Install-If-Not-Exists "python"
-Install-If-Not-Exists "nodejs-lts" "node"
-Install-If-Not-Exists "sudo"
-Install-If-Not-Exists "nmap"
-Install-If-Not-Exists "grep"
-Install-If-Not-Exists "less"
-Install-If-Not-Exists "sqlite" "sqlite3"
-Install-If-Not-Exists "ctags"
+Install-With-Winget-If-Not-Exists "Microsoft.Powershell" "pwsh"
+Install-With-Winget-If-Not-Exists "Microsoft.VisualStudioCode" "code"
+Install-With-Winget-If-Not-Exists "GnuWin32.Make" "make"
+Install-With-Winget-If-Not-Exists "Python.Python.3.11" "python"
+Install-With-Winget-If-Not-Exists "OpenJS.NodeJS.LTS" "node"
+Install-With-Winget-If-Not-Exists "Insecure.Nmap" "nmap"
+Install-With-Winget-If-Not-Exists "GnuWin32.Grep" "grep"
