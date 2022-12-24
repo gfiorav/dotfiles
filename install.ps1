@@ -37,6 +37,20 @@ function Test-Command-Exists {
     }
 }
 
+function Update-Choco-Packages {
+    # Resolve the path to the chocolatey executable.
+    $chocoPath = Get-Command choco.exe -ErrorAction SilentlyContinue
+
+    $process = Start-Process `
+        -FilePath $chocoPath.Path `
+        -ArgumentList "upgrade all" `
+        -Verb RunAs -Wait -PassThru
+
+    if ($process.ExitCode -ne 0) {
+        Write-Host "Chocolatey failed to update packages."
+    }
+}
+
 function Install-If-Not-Exists {
     Param (
         $package,
@@ -76,7 +90,9 @@ function Install-Vim-Plugins {
 }
 
 if (Test-Command-Exists "choco") {
-    Write-Host "Choco is already installed, skipping..."
+    Write-Host "Choco is already installed, updating..."
+    # Update choco packages
+    Update-Choco-Packages
 } else {
     if (Get-User-Consent "Install Chocolatey?") {
         Write-Host "Installing Chocolatey..."
