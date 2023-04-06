@@ -136,7 +136,7 @@ set guicursor+=i:blinkwait10
 
 " Only on linux:
 if has("gui_gtk2") || has("gui_gtk3")
-    set guifont=Monospace\ Regular\ 9
+    set guifont=Monospace\ Regular\ 10
 endif
 
 " Only MacVim
